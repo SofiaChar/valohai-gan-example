@@ -1,0 +1,47 @@
+- step:
+    name: gan
+    image: python:3.9
+    command:
+    - pip install -r requirements.txt
+    - python gan_test.py {parameters}
+    parameters:
+    - name: n_epochs
+      default: 10
+      optional: true
+      type: integer
+    - name: batch_size
+      default: 64
+      optional: true
+      type: integer
+    - name: lr
+      default: 0.0002
+      optional: true
+      type: float
+    - name: b1
+      default: 0.5
+      optional: true
+      type: float
+    - name: b2
+      default: 0.999
+      optional: true
+      type: float
+    - name: n_cpu
+      default: 8
+      optional: true
+      type: integer
+    - name: latent_dim
+      default: 62
+      optional: true
+      type: integer
+    - name: img_size
+      default: 32
+      optional: true
+      type: integer
+    - name: channels
+      default: 1
+      optional: true
+      type: integer
+    - name: sample_interval
+      default: 10
+      optional: true
+      type: integer
